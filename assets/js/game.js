@@ -1,14 +1,12 @@
 var playerName = window.prompt("What's your robot's name?");
-var playerMoney = 10;
 var playerHealth = 100;
 var playerAttack = 10;
+var playerMoney = 10;
 
-console.log(playerName, playerAttack, playerHealth);
-var enemyName = "roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
-
-var fight = function(){
+        var fight = function(enemyName) {
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 // if player choses to fight, then fight
 if (promptFight === "fight" || promptFight === "FIGHT") {
@@ -55,5 +53,6 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
   }
 };
 
-
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
